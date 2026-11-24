@@ -20,13 +20,13 @@ const MIN_BUY = 10_000_000n; // 0.01 SOL round-trip gate
 const MAX_SLIPPAGE_BPS = 500;
 const YOUNG_SLOTS = 13_500; // ~90 min at ~2.5 slots/s
 const MOMENTUM_WINDOW = 300; // ~2 min lookback for the momentum read
-const MOMENTUM_MIN = 1.07; // need +7% over the lookback window
+const MOMENTUM_MIN = 1.1; // need +10% over the lookback window
 const HIGH_WINDOW = 600; // ~4 min window for the "still near its high" test
-const NEAR_HIGH_MIN = 0.97; // current price must hold >= 97% of recent high
+const NEAR_HIGH_MIN = 0.98; // current price must hold >= 98% of recent high
 const OVEREXTENDED_MAX = 1.3; // skip coins already > 30% above first price
 const MIN_TRADES = 4; // need a little tape before trusting the price
-const TAKE_PROFIT = 1.3; // sell at +30%
-const STOP_LOSS = 0.88; // sell at -12%
+const TAKE_PROFIT = 1.4; // sell at +40%: let the few runners pay for the losers
+const STOP_LOSS = 0.92; // sell at -8%: cut fades fast, they rarely come back
 const MAX_HOLD_SLOTS = 3_000; // ~20 min max hold
 const HISTORY_CAP = 96; // price samples kept per candidate mint
 
